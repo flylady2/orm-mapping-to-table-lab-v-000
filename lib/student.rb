@@ -36,7 +36,7 @@ class Student
     VALUES(?, ?)
     SQL
     DB[:conn].execute(sql, self.name, self.grade)
-    row = DB[:conn].execute(sql).flatten
+    #row = DB[:conn].execute(sql).flatten
     binding.pry
     @id = row[0]
     #@id = DB[:conn].execute("SELECT last_insert_row_id FROM students")[0][0]
